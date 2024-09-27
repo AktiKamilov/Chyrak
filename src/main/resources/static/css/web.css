@@ -1,0 +1,127 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000; /* Текст */
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.header-left h1 a, .header-right nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-right nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header-right nav ul li a.active, footer nav ul li a.active {
+    color: red; /* Красный цвет для активной ссылки */
+}
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.book-button {
+    padding: 10px 20px;
+    background-color: #af3030; /* кнопка */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.book-button:hover {
+    background-color: #df3311; /*басканда*/
+}
+
+.intro-text, .why {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 80%;
+}
+.intro-text{
+    font-size: 20px;
+}
+.why{
+    font-size: 25px;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #e5e3e3; /* Темный фон контейнера */
+    color: #101010;
+    border: 1px solid #fff; /* Белая линия вокруг таблицы */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+td {
+    padding: 20px;
+    vertical-align: top;
+}
+
+.content {
+    width: 60%;
+}
+
+.text p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.image {
+    width: 40%;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+footer h1 a, footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}

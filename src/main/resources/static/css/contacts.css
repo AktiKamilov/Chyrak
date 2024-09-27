@@ -1,0 +1,124 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.header-left h1 a, .header-right nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-right nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header-right nav ul li a.active, footer nav ul li a.active {
+    color: red; /* Красный цвет для активной ссылки */
+}
+
+main {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #fff; /* Белая рамка */
+    padding: 20px;
+    background-color: #111; /* Темный фон для контейнера */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group.row label {
+    flex: 1;
+    min-width: 100px;
+}
+
+.form-group.row input {
+    flex: 1;
+    min-width: calc(50% - 20px);
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff; /* Белая рамка */
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.submit {
+    text-align: center;
+}
+
+.book-button {
+    padding: 10px 20px;
+    background-color: #af3030; /* кнопка */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.book-button:hover {
+    background-color: #df3311; /*басканда*/
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+footer h1 a, footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}

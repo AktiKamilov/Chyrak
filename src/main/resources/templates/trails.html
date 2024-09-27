@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trails - Chyrak Travel</title>
+    <link rel="stylesheet" th:href="@{/css/trails.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <h1><a th:href="@{/web}">CHYRAK</a></h1>
+    </div>
+    <div class="header-right">
+        <nav>
+            <ul>
+                <li><a th:href="@{/about}">About</a></li>
+                <li><a th:href="@{/trails}">Trails</a></li>
+                <li><a th:href="@{/contacts}">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <h2>Our Trails</h2>
+</main>
+
+<section class="products">
+    <article class="product">
+        <img src="/images/arakol.jpg" width="200px">
+        <h2>Ara-Kol</h2>
+        <p>Half day</p>
+        <h3>$20</h3>
+        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+    </article>
+    <article class="product">
+        <img src="/images/karakamysh.jpg">
+        <h2>Kara-Kamysh</h2>
+        <p>Full day</p>
+        <h3>$80</h3>
+        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+    </article>
+    <article class="product">
+        <img src="/images/alaarcha.jpg">
+        <h2>Ala-Archa</h2>
+        <p>Full day</p>
+        <h3>$90</h3>
+        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+    </article>
+    <article class="product">
+        <img src="/images/koltetiri.jpg">
+        <h2>Kol-Tetiri</h2>
+        <p>Full day</p>
+        <h3>$80</h3>
+        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+    </article>
+    <article class="product">
+        <img src="/images/aktuz.jpg">
+        <h2>Ak-Tuz</h2>
+        <p>Half day</p>
+        <h3>$17</h3>
+        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+    </article>
+    <article class="product">
+        <img src="/images/lenin.jpg">
+        <h2>Lenin Peak</h2>
+        <p>Two days</p>
+        <h3>$100</h3>
+        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+    </article>
+</section>
+
+<footer>
+    <div class="footer-left">
+        <h1><a th:href="@{/web}">CHYRAK</a></h1>
+    </div>
+    <div class="footer-right">
+        <nav>
+            <ul>
+                <li><a th:href="@{/about}">About</a></li>
+                <li><a th:href="@{/trails}">Trails</a></li>
+                <li><a th:href="@{/contacts}">Contacts</a></li>
+                <li><a th:href="@{/trails}" class="book-button">BOOK</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<script src="web.js"></script>
+</body>
+</html>

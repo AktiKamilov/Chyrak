@@ -1,0 +1,94 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000; /* Текст */
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.header-left h1 a, .header-right nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-right nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header-right nav ul li a.active, footer nav ul li a.active {
+    color: red; /* Красный цвет для активной ссылки */
+}
+
+main {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background-color: #dbd4d4cb;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product h2, .product p, .product h3 {
+    margin: 10px 0;
+}
+
+.book-button {
+    padding: 10px 20px;
+    background-color: #af3030; /* кнопка */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.book-button:hover {
+    background-color: #df3311; /*басканда*/
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+footer h1 a, footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+

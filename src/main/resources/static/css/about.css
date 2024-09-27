@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.header-left h1 a, .header-right nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-right nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header-right nav ul li a.active, footer nav ul li a.active {
+    color: red;
+}
+
+h2{
+    text-align: center;
+}
+.kg p{
+    flex: 1;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+td {
+    padding: 20px;
+    vertical-align: top;
+}
+
+.content {
+    width: 60%;
+}
+
+.text p {
+    margin: 0;
+    line-height: 2;
+}
+
+.image {
+    width: 40%;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.gallerea {
+    flex: 1;
+    /*padding: 0;*/
+    text-align: center;
+}
+
+.book-button {
+    padding: 10px 20px;
+    background-color: #af3030; /* кнопка */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.book-button:hover {
+    background-color: #df3311; /*басканда*/
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+footer h1 a, footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
