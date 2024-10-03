@@ -22,8 +22,9 @@ public class MainController {
     public String trails() {
         return "trails";
     }
-    @GetMapping("/contacts")
-    public String contacts() {
-        return "contacts";
+    @GetMapping("/booking")
+    public String booking() {
+        return "booking";
     }
+
 }

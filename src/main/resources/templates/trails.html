@@ -17,7 +17,20 @@
             <ul>
                 <li><a th:href="@{/about}">About</a></li>
                 <li><a th:href="@{/trails}">Trails</a></li>
-                <li><a th:href="@{/contacts}">Contacts</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+
+                <!-- Проверяем, авторизован ли пользователь -->
+
+                <li th:if="${#httpServletRequest.remoteUser != null}">
+                    <!-- Если пользователь авторизован, показываем его профиль -->
+                    <a th:href="@{/profile}">
+                        <img th:src="@{/static/images/avatar.png}" alt="Profile" width="32" height="32" class="rounded-circle">
+                    </a>
+                </li>
+                <li th:if="${#httpServletRequest.remoteUser == null}">
+                    <!-- Если пользователь не авторизован, показываем ссылку "Sign in" -->
+                    <a th:href="@{/signin}">Sign in</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -32,42 +45,42 @@
         <h2>Ara-Kol</h2>
         <p>Half day</p>
         <h3>$20</h3>
-        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+        <a th:href="@{/booking}" class="book-button">BOOK NOW</a>
     </article>
     <article class="product">
         <img src="/images/karakamysh.jpg">
         <h2>Kara-Kamysh</h2>
         <p>Full day</p>
         <h3>$80</h3>
-        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+        <a th:href="@{/booking}" class="book-button">BOOK NOW</a>
     </article>
     <article class="product">
         <img src="/images/alaarcha.jpg">
         <h2>Ala-Archa</h2>
         <p>Full day</p>
         <h3>$90</h3>
-        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+        <a th:href="@{/booking}" class="book-button">BOOK NOW</a>
     </article>
     <article class="product">
         <img src="/images/koltetiri.jpg">
         <h2>Kol-Tetiri</h2>
         <p>Full day</p>
         <h3>$80</h3>
-        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+        <a th:href="@{/booking}" class="book-button">BOOK NOW</a>
     </article>
     <article class="product">
         <img src="/images/aktuz.jpg">
         <h2>Ak-Tuz</h2>
         <p>Half day</p>
         <h3>$17</h3>
-        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+        <a th:href="@{/booking}" class="book-button">BOOK NOW</a>
     </article>
     <article class="product">
         <img src="/images/lenin.jpg">
         <h2>Lenin Peak</h2>
         <p>Two days</p>
         <h3>$100</h3>
-        <a th:href="@{/contacts}" class="book-button">BOOK NOW</a>
+        <a th:href="@{/booking}" class="book-button">BOOK NOW</a>
     </article>
 </section>
 
@@ -80,8 +93,13 @@
             <ul>
                 <li><a th:href="@{/about}">About</a></li>
                 <li><a th:href="@{/trails}">Trails</a></li>
-                <li><a th:href="@{/contacts}">Contacts</a></li>
-                <li><a th:href="@{/trails}" class="book-button">BOOK</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+                <li th:if="${#httpServletRequest.remoteUser != null}">
+                    <a th:href="@{/profile}" class="book-button">Profile</a>
+                </li>
+                <li th:if="${#httpServletRequest.remoteUser == null}">
+                    <a th:href="@{/signin}" class="book-button">Sign in</a>
+                </li>
             </ul>
         </nav>
     </div>

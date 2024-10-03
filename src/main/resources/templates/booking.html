@@ -17,7 +17,20 @@
             <ul>
                 <li><a th:href="@{/about}">About</a></li>
                 <li><a th:href="@{/trails}">Trails</a></li>
-                <li><a th:href="@{/contacts}">Contacts</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+
+                <!-- Проверяем, авторизован ли пользователь -->
+
+                <li th:if="${#httpServletRequest.remoteUser != null}">
+                    <!-- Если пользователь авторизован, показываем его профиль -->
+                    <a th:href="@{/profile}">
+                        <img th:src="@{/static/images/avatar.png}" alt="Profile" width="32" height="32" class="rounded-circle">
+                    </a>
+                </li>
+                <li th:if="${#httpServletRequest.remoteUser == null}">
+                    <!-- Если пользователь не авторизован, показываем ссылку "Sign in" -->
+                    <a th:href="@{/signin}">Sign in</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -35,18 +48,18 @@
     <!-- Обработка формы -->
     <form th:action="@{/contacts/submit}" method="post">
         <div class="form-group row">
-            <label for="name">First name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="surname">Last name:</label>
-            <input type="text" id="surname" name="surname" required>
+            <label for="title">Name of the tour:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="desired_data">Desired data:</label>
+            <input type="text" id="desired_data" name="desired_data" required>
         </div>
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
-            <label for="message">Leave us a message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <label for="wishes">Write us your wishes:</label>
+            <textarea id="wishes" name="wishes" required></textarea>
         </div>
         <div class="submit">
             <button type="submit" class="book-button">SUBMIT</button>
@@ -63,8 +76,13 @@
             <ul>
                 <li><a th:href="@{/about}">About</a></li>
                 <li><a th:href="@{/trails}">Trails</a></li>
-                <li><a th:href="@{/contacts}">Contacts</a></li>
-                <li><a th:href="@{/trails}" class="book-button">BOOK</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+                <li th:if="${#httpServletRequest.remoteUser != null}">
+                    <a th:href="@{/profile}" class="book-button">Profile</a>
+                </li>
+                <li th:if="${#httpServletRequest.remoteUser == null}">
+                    <a th:href="@{/signin}" class="book-button">Sign in</a>
+                </li>
             </ul>
         </nav>
     </div>

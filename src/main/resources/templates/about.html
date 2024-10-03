@@ -19,7 +19,20 @@
             <ul>
                 <li><a th:href="@{/about}">About</a></li>
                 <li><a th:href="@{/trails}">Trails</a></li>
-                <li><a th:href="@{/contacts}">Contacts</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+
+                <!-- Проверяем, авторизован ли пользователь -->
+
+                <li th:if="${#httpServletRequest.remoteUser != null}">
+                    <!-- Если пользователь авторизован, показываем его профиль -->
+                    <a th:href="@{/profile}">
+                        <img th:src="@{/static/images/avatar.png}" alt="Profile" width="32" height="32" class="rounded-circle">
+                    </a>
+                </li>
+                <li th:if="${#httpServletRequest.remoteUser == null}">
+                    <!-- Если пользователь не авторизован, показываем ссылку "Sign in" -->
+                    <a th:href="@{/signin}">Sign in</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -249,8 +262,13 @@
             <ul>
                 <li><a th:href="@{/about}">About</a></li>
                 <li><a th:href="@{/trails}">Trails</a></li>
-                <li><a th:href="@{/contacts}">Contacts</a></li>
-                <li><a th:href="@{/trails}" class="book-button">BOOK</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+                <li th:if="${#httpServletRequest.remoteUser != null}">
+                    <a th:href="@{/profile}" class="book-button">Profile</a>
+                </li>
+                <li th:if="${#httpServletRequest.remoteUser == null}">
+                    <a th:href="@{/signin}" class="book-button">Sign in</a>
+                </li>
             </ul>
         </nav>
     </div>
