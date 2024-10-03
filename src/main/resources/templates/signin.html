@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/css/signin.css}">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Login Screen</title>
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <h1><a th:href="@{/web}">CHYRAK</a></h1> <!-- Ссылка на главную страницу -->
+  </div>
+  <div class="header-right">
+    <nav>
+      <ul>
+        <li><a th:href="@{/about}">About</a></li>
+        <li><a th:href="@{/trails}">Trails</a></li>
+        <li><a th:href="@{/booking}">Booking</a></li>
+        <li><a th:href="@{/signin}">Sign in</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="login">
+  <div class="login-container">
+    <h1 style="text-align: center">Авторизация</h1>
+    <hr>
+
+    <form th:action="@{/login}" method="post">
+      <div class="form-group">
+        <label for="email">Электронная почта</label>
+        <input type="email" class="form-control" id="email" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <input type="hidden" name="_csrf" th:value="${_csrf.token}">
+      <button type="submit" style="width: 100%" class="btn btn-dark">Войти</button>
+
+      <div th:if="${param.error}" class="alert alert-danger" role="alert">
+        Неверная электронная почта или пароль.
+      </div>
+    </form>
+
+    <hr>
+    <h2>Нет аккаунта CHYRAK? <a th:href="@{/signup}">Зарегистрируйся!</a></h2>
+  </div>
+
+</div>
+
+
+<footer>
+  <div class="footer-left">
+    <h1><a th:href="@{/web}">CHYRAK</a></h1> <!-- Ссылка на главную страницу -->
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <li><a th:href="@{/about}">About</a></li>
+        <li><a th:href="@{/trails}">Trails</a></li>
+        <li><a th:href="@{/booking}">Booking</a></li>
+        <li><a th:href="@{/signin}">Sign in</a></li>
+        <li><a th:href="@{/trails}" class="book-button">BOOK</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: #000000;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.header-left h1 a, .header-right nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-right nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px); /* чтобы контент занимал весь экран, минус header и footer */
+}
+
+.profile-container {
+    width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.booked-trips {
+    margin-top: 20px;
+}
+
+.booked-trips .trip {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.booked-trips .trip h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.booked-trips .trip p {
+    margin: 5px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+footer h1 a, footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}

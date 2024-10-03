@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Admin - Users List</title>
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <h1><a th:href="@{/}">CHYRAK</a></h1>
+    </div>
+    <div class="header-right">
+        <nav>
+            <ul>
+                <li><a th:href="@{/admin}">Admin Dashboard</a></li>
+                <li><a th:href="@{/logout}">Sign out</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Users List</h2>
+    <div class="user-list">
+        <div th:each="user : ${users}" class="user-item">
+            <span th:text="${user.name}"></span>
+            <a th:href="@{/admin/user/{id}(id=${user.id})}">View Details</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-left">
+        <h1><a th:href="@{/}">CHYRAK</a></h1>
+    </div>
+    <div class="footer-right">
+        <nav>
+            <ul>
+                <li><a th:href="@{/about}">About</a></li>
+                <li><a th:href="@{/trails}">Trails</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+                <li><a th:href="@{/logout}">Sign out</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

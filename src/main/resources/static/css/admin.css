@@ -1,0 +1,57 @@
+    /* Общий стиль */
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: #000000;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+h1 a, nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    color: white;
+}
+
+.user-list {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.user-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.user-item a:hover {
+    text-decoration: underline;
+}

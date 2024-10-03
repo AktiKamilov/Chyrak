@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/signup.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Signup Screen</title>
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <h1><a th:href="@{/web}">CHYRAK</a></h1> <!-- Ссылка на главную страницу -->
+    </div>
+    <div class="header-right">
+        <nav>
+            <ul>
+                <li><a th:href="@{/about}">About</a></li>
+                <li><a th:href="@{/trails}">Trails</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+                <li><a th:href="@{/signin}">Sign in</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Форма для отправки данных пользователя -->
+<div class="login">
+    <div class="login-container">
+        <form th:action="@{/signup}" method="post" th:object="${user}">
+            <input type="text" th:field="*{name}" placeholder="name">
+            <input type="text" th:field="*{phoneNumber}" placeholder="phoneNumber">
+            <input type="email" th:field="*{email}" placeholder="email">
+            <input type="password" th:field="*{password}" placeholder="password"><br>
+            <button type="submit" class="save">Save</button> <!-- Кнопка для отправки формы -->
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-left">
+        <h1><a th:href="@{/web}">CHYRAK</a></h1> <!-- Ссылка на главную страницу -->
+    </div>
+    <div class="footer-right">
+        <nav>
+            <ul>
+                <li><a th:href="@{/about}">About</a></li>
+                <li><a th:href="@{/trails}">Trails</a></li>
+                <li><a th:href="@{/booking}">Booking</a></li>
+                <li><a th:href="@{/signin}">Sign in</a></li>
+                <li><a th:href="@{/trails}" class="book-button">BOOK</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
